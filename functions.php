@@ -23,7 +23,14 @@
 		$mail->addAddress("to address", "Recepient Name");
 		$mail->isHTML(true);
 		$mail->Subject = $subject;
+		/* Add email template directly */
 		$mail->Body = $body;
+		/* If you have custom varibles to pass to your email template, You can do like this. Comment above line and below 3 lines.  */
+		$message = $body;
+    	$message = str_replace('%testusername%', 'Chamith K.', $message);
+    	$mail->msgHTML($message);
+    	/* You can display this varialble inside your html template like this:  Hi %testusername%, */
+
 		$mail->AltBody = "This is the plain text version of the email content";
 		$send = false;
 
