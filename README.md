@@ -22,6 +22,6 @@ $message = str_replace('%myName%', 'My Name Is Bla Bla', $message);
 $mail->msgHTML($message);
 ```
 
-You can use 'myName' varible inside your email template like this
+You can use 'myName' variable inside your email template like this
 
-Hi, %testusername%
+Hi, %myName%
